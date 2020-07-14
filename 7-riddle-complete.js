@@ -2,12 +2,12 @@
  * Mental Model Complete.
  * 
  * Let's go solve that riddle!
- * 
+ * - [mental model](7a-riddle-complete-call-stack.md)
  */
 
 async function bar(n, s, t) {
-  setImmediate(() => process.stdout.write(s)); // ?
-  await new Promise((r, _) => setTimeout(() => r(), n)); // microtask queue, // ?
+  setImmediate(() => process.stdout.write(s)); // next available task (timers) queue
+  await new Promise((r, _) => setTimeout(() => r(), n)); // microtask queue, // next available task (timers) queue
   return t;
 }
 
@@ -21,6 +21,6 @@ queueMicrotask(() => process.stdout.write('J')); // microtask queue
 
 process.nextTick(() => process.stdout.write('N')); // nextTick queue
 
-setImmediate(() => process.stdout.write('O')); // ?
+setImmediate(() => process.stdout.write('O')); // next available task (timers) queue
 
 foo();
