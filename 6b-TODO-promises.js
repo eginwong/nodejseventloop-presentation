@@ -1,6 +1,4 @@
 /** 
- * How to grok when they all come together?
- * 
  * # Promises
  *   - promise.then(() => {})
  *   - async functions

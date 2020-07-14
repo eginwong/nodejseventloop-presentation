@@ -1,10 +1,8 @@
-/** 
- * How to grok when they all come together?
+/**
+ * Mental Model Complete.
  * 
- * # Timers
- * # Promises
- * # Observables
- * # Miscellaneous
+ * Let's go solve that riddle!
+ * 
  */
 
 async function bar(n, s, t) {

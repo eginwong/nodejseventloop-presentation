@@ -8,7 +8,7 @@
  */
 
 // =================MICROTASK QUEUES================
-function microtaskQueues() {
+(function microtaskQueues() {
     // microtasks slot in between tasks, so microtask queue runs multiple times per queue execution
     
     function bar() {
@@ -20,6 +20,4 @@ function microtaskQueues() {
     queueMicrotask(() => queueMicrotask(() => process.stdout.write("MicroTQ #2\n")));
     Promise.resolve().then(() => process.stdout.write("MicroTQ #3\n"));
     setTimeout(() => process.stdout.write("TQ #2\n"), 0); // timers
-};
-
-microtaskQueues();
+})();

@@ -29,7 +29,3 @@
  * - [mental model](call-stack.md)
  */
 
-
-// ===================TASK QUEUES===================
-// =================MICROTASK QUEUES================
-
