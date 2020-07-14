@@ -5,6 +5,7 @@
  *   - Promises
  *   - MutationObserver API, watch for changes in DOM tree very specific
  *   - queueMicrotasks
+ * - microtasks always prioritized over event loop phases
  */
 
 // =================MICROTASK QUEUES================

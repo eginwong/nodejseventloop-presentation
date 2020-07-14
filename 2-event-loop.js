@@ -22,6 +22,8 @@
 │  ┌─────────────┴─────────────┐
 └──┤      close callbacks      │
    └───────────────────────────┘
+               tick()
+               
  * - task queues
  * - microtask queues
  * - nextTick queues

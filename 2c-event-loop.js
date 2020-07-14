@@ -3,6 +3,7 @@
  * 
  * - nextTick queues
  *   - process.nextTick
+ * - microtasks always prioritized over event loop phases
  */
 
 // ==================NEXTTICK QUEUES================
