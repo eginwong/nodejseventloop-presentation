@@ -9,14 +9,3 @@
 7. summary of mental model; end with walking through solution of the riddle stack by stack [35->40]
 8. author [40->42]
 9. Q&A; send off another riddle to ask for answers [42->50]
-
-
-## side notes
-- Scheduler is an execution context
-  - when and where task is executed (immediately, setTimeout, process.nextTick, animation frame)
-  - asapScheduler - microtask
-  - asyncScheduler - setInterval
-  - animationFrameScheduler - requestAnimationFrame/setImmediate
-  - queueScheduler - trampoline scheduler, current event frame
-  - null - default is synchronous/recursive
-- time-related operators (debounceTime, timeout, windowtime, etc) all use asyncScheduler

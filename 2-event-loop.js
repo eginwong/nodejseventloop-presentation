@@ -1,9 +1,9 @@
 /** 
  * Event Loop concepts
  * 
+ * - single-threaded
  * - while(true) {}
  *   - tasks added to the queue AFTER the iteration begins will not run until the next iteration.
- * TODO: PHASES?
  * ┌───────────────────────────┐
 ┌─>│           timers          │
 │  └─────────────┬─────────────┘
