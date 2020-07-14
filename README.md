@@ -1,4 +1,4 @@
-# nodejs event loop code thoughts
+# Node.js Event Loop Presentation
 
 1. start with riddle [-5->0]
 2. what is event loop briefly [0->2]

@@ -28,4 +28,3 @@
  * 
  * - [mental model](call-stack.md)
  */
-

@@ -6,7 +6,7 @@
  */
 
 // ==================NEXTTICK QUEUES================
-function nextTickQueues() {
+(function nextTickQueues() {
     
     function bar() {
         process.nextTick(() => process.stdout.write("NTQ #1\n"));
@@ -17,6 +17,4 @@ function nextTickQueues() {
     queueMicrotask(() => process.stdout.write("MicroTQ #1\n")); // microtask
     process.nextTick(() => process.stdout.write("NTQ #2\n"));
     setTimeout(() => process.stdout.write("TQ #2\n"), 0); // timers
-};
-
-nextTickQueues();
+})();

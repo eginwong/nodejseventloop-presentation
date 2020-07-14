@@ -1,5 +1,5 @@
 /**
- * Mental Model Complete.
+ * Mental Model Complete
  * 
  * Let's go solve that riddle!
  * - [mental model](7a-riddle-complete-call-stack.md)
