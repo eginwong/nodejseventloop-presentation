@@ -2,8 +2,7 @@
  * Event Loop concepts
  * 
  * - single-threaded
- * - while(true) {}
- *   - tasks added to the queue AFTER the iteration begins will not run until the next iteration.
+ * - while(tasks) {}
  * ┌───────────────────────────┐
 ┌─>│           timers          │
 │  └─────────────┬─────────────┘
@@ -28,5 +27,5 @@
  * - microtask queues
  * - nextTick queues
  * 
- * - [mental model](call-stack.md)
+ * - [mental model](mental-model.md)
  */

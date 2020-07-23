@@ -121,12 +121,12 @@ nextTick: `process.stdout.write('N')`
 ---------------
 NextTick Queue (nodejs)
 
-promise: setTimeout, 20 THEN return ":"
-promise: setTimeout, 10 THEN return ")"
 queueMicrotask: `process.stdout.write('J')`
 ---------------
 Microtask Queue (v8)
 
+setTimeout: 20 THEN return promise for ":"
+setTimeout: 10 THEN return promise for ")"
 immediate: `process.stdout.write(' ')`
 immediate: `process.stdout.write('Y')`
 immediate: `process.stdout.write('O')`
@@ -144,12 +144,12 @@ Console
 
 ========================================
 
-promise: setTimeout, 20 THEN return ":"
-promise: setTimeout, 10 THEN return ")"
 queueMicrotask: `process.stdout.write('J')`
 ---------------
 Microtask Queue (v8)
 
+setTimeout: 20 THEN return promise for ":"
+setTimeout: 10 THEN return promise for ")"
 immediate: `process.stdout.write(' ')`
 immediate: `process.stdout.write('Y')`
 immediate: `process.stdout.write('O')`
@@ -167,11 +167,11 @@ Console
 
 ========================================
 
-promise: setTimeout, 20 THEN return ":"
-promise: setTimeout, 10 THEN return ")"
 ---------------
 Microtask Queue (v8)
 
+setTimeout: 20 THEN return promise for ":"
+setTimeout: 10 THEN return promise for ")"
 immediate: `process.stdout.write(' ')`
 immediate: `process.stdout.write('Y')`
 immediate: `process.stdout.write('O')`
@@ -189,8 +189,8 @@ Console
 
 ========================================
 
-setTimeout, 20 THEN return ":"
-setTimeout, 10 THEN return ")"
+setTimeout: 20 THEN return promise for ":"
+setTimeout: 10 THEN return promise for ")"
 immediate: `process.stdout.write(' ')`
 immediate: `process.stdout.write('Y')`
 immediate: `process.stdout.write('O')`
@@ -208,8 +208,8 @@ Console
 
 ========================================
 
-setTimeout, 20 THEN return ":"
-setTimeout, 10 THEN return ")"
+setTimeout: 20 THEN return promise for ":"
+setTimeout: 10 THEN return promise for ")"
 ---------------
 Task Queue
 
@@ -223,6 +223,64 @@ Call Stack
 Console
 
 ========================================
+
+promise: resolve() and then return ")"
+---------------
+Microtask Queue (v8)
+
+setTimeout: 20 THEN return promise for ":"
+---------------
+Task Queue
+
+foo()
+----------
+Call Stack
+
+'ENJOY '
+----------
+Console
+
+========================================
+
+---------------
+Microtask Queue (v8)
+
+setTimeout: 20 THEN return promise for ":"
+---------------
+Task Queue
+
+foo(), with promises on microtask[_pending, ")"]
+----------
+Call Stack
+
+'ENJOY '
+----------
+Console
+
+========================================
+
+promise: resolve() and then return ":"
+---------------
+Microtask Queue (v8)
+
+---------------
+Task Queue
+
+foo(), with promises on microtask[_pending, ")"]
+----------
+Call Stack
+
+'ENJOY '
+----------
+Console
+
+========================================
+
+---------------
+Microtask Queue (v8)
+
+---------------
+Task Queue
 
 foo(), with promises on microtask[":", ")"]
 ----------

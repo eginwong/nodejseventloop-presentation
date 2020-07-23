@@ -1,5 +1,6 @@
 /** 
- * Introduction
+ * Event Loop: Timers / Promises / Observables
+ *   CAVEAT: Chrome/Edge, Node.js, Mozilla?
  * 
  * @eginwong
  * https://github.com/eginwong
@@ -8,10 +9,7 @@
  * 
  * 
  * 
- * 
- * 
  * # Audience
- *   Vincent Cuenca!
  *   - curious about js event loop
  *   - seen js timers but never fully grokked how they work and play together
  * 
@@ -20,6 +18,6 @@
  *   - How do timers/promises/rxjs/ticks work together?
  * 
  * # Takeaway
- *   - Demystify the event loop timers
+ *   - Practically demystify the event loop
  *   - Provide tools to solve the riddle
  */

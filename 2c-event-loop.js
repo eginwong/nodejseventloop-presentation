@@ -3,7 +3,6 @@
  * 
  * - nextTick queues
  *   - process.nextTick
- * - microtasks always prioritized over event loop phases
  */
 
 // ==================NEXTTICK QUEUES================
@@ -17,5 +16,4 @@
     bar(); // regular execution
     queueMicrotask(() => process.stdout.write("MicroTQ #1\n")); // microtask
     process.nextTick(() => process.stdout.write("NTQ #2\n"));
-    setTimeout(() => process.stdout.write("TQ #2\n"), 0); // timers
 })();

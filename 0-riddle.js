@@ -19,3 +19,5 @@ process.nextTick(() => process.stdout.write('N'));
 setImmediate(() => process.stdout.write('O'));
 
 foo();
+
+// Q: What is written out?

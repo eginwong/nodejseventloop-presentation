@@ -5,8 +5,6 @@
  */
 
 (async function microtaskQueues() {
-    // microtasks slot in between tasks, so microtask queue runs multiple times per queue execution
-    
     async function cheese() {
         return new Promise((resolve, reject) => {
             process.stdout.write("MicroTQ #2: in an async function!\n");
@@ -15,7 +13,7 @@
     }
 
     setTimeout(() => process.stdout.write("TQ\n"), 0);
-    await cheese(); // regular execution
     queueMicrotask(() => process.stdout.write("MicroTQ #1\n"));
+    await cheese(); // regular execution
     Promise.resolve().then(() => process.stdout.write("MicroTQ #3\n"));
 })();
