@@ -2,7 +2,7 @@
   "name": "nodejseventloop",
   "version": "1.0.0",
   "description": "",
-  "main": "1-riddle.js",
+  "main": "0-riddle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

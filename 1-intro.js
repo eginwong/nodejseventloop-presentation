@@ -3,8 +3,11 @@
  *   CAVEAT: Chrome/Edge, Node.js, Mozilla?
  * 
  * @eginwong
+ * Eric Wong!
+ * 
  * https://github.com/eginwong
  * Senior Consultant with Avanade, 2020
+ * 
  * 
  * 
  * 
