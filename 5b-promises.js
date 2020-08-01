@@ -6,9 +6,8 @@
 
 (async function microtaskQueues() {
     async function cheese() {
-        return new Promise((resolve, reject) => {
+        return Promise.resolve().then(() => {
             process.stdout.write("MicroTQ #2: in an async function!\n");
-            resolve();
         })
     }
 
