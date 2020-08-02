@@ -15,6 +15,7 @@
 
     setTimeout(() => process.stdout.write("TQ\n"), 0);
     queueMicrotask(() => process.stdout.write("MicroTQ #1\n"));
-    await cheese(); // regular execution
+    await cheese(); // await synchronous execution of microtask queue and above
+    // add breakpoint at 20 to see how execution occurs
     Promise.resolve().then(() => process.stdout.write("MicroTQ #3\n"));
 })();
