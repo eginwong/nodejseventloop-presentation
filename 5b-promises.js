@@ -2,6 +2,8 @@
  * # Promises
  *   - promise.then(() => {})
  *   - async functions
+ * NOTE: async/await pauses to let execution of promise occur synchronously, 
+ *   but that also clears what's on the microtask queue.
  */
 
 (async function microtaskQueues() {
