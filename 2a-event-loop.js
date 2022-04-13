@@ -1,7 +1,7 @@
 /** 
  * Event Loop concepts
  * 
- * - task queues
+ * - (macro)task queues
  *   - regular execution
  *   - event callback // element.addListener(), but node is sync and UI is async
  *   - timers (covered later)

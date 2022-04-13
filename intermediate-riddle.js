@@ -12,7 +12,7 @@ async function bar(n, s, t) {
 
 async function foo() {
   process.stdout.write('R');
-  for (const m of await Promise.all([bar(20, 'A', 'A'), bar(10, 'V', 'N')]))
+  for (const m of await Promise.all([bar(20, 'W', 'E'), bar(10, 'E', 'K')]))
     process.stdout.write(m)
 }
 
@@ -22,7 +22,7 @@ async function che(input) {
   }), 100);
 }
 
-sleep(50).then(() => process.stdout.write('A'));
+sleep(50).then(() => process.stdout.write('E'));
 
 new Promise((res) => {
   process.stdout.write('T');
@@ -34,12 +34,12 @@ queueMicrotask(() => process.stdout.write('T'));
 
 process.nextTick(() => process.stdout.write('O'));
 
-setTimeout(() => process.stdout.write('D'), 100);
+setTimeout(() => process.stdout.write('N'), 100);
 
 setImmediate(() => process.stdout.write(' '));
 
 process.stdout.write('O');
 
-rx.of('E').subscribe(che);
+rx.of('D').subscribe(che);
 
 foo();

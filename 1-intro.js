@@ -6,7 +6,7 @@
  * Eric Wong!
  * 
  * https://github.com/eginwong
- * Senior Consultant with Avanade, 2020
+ * Senior Developer with Hatch, 2022
  * 
  * 
  * 

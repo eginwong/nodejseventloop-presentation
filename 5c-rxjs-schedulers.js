@@ -18,11 +18,11 @@ const rx = require('rxjs');
         .subscribe((arr) => process.stdout.write(arr)); // default: current synchronous execution
     
     rx.of(" b ", rx.asapScheduler)
-        .subscribe((_arr) => process.stdout.write(_arr)); // next mIcrotask
+        .subscribe((_arr) => process.stdout.write(_arr)); // next microtask
     
     rx.of(" c ", rx.queueScheduler)
         .subscribe((_arr) => process.stdout.write(_arr)); // current synchronous execution
     
     rx.of(" d ", rx.asyncScheduler)
-        .subscribe((_arr) => process.stdout.write(_arr)); // next mAcrotask
+        .subscribe((_arr) => process.stdout.write(_arr)); // next macrotask
 })();

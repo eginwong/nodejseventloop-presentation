@@ -16,8 +16,13 @@
 - watch out for keyboard shortcuts when doing live-demo!
 - call stack is properly ordered (add highest priority at top of file)
 - add new sections over the presentation
+- how does promise / catch work?
+  - remains in the microtask queue execution, though further execution is aborted.
+- what is the history of task queues?
+  - Apparently microtask queues have been around since 2015, but yeah, why that change was introduced is a bit hazy as devs were manipulating the setTimeout/setIntermediate APIs to accomplish the same effect.
 ```md
 # Highest Priority
+
 
 
 
